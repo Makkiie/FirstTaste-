@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      adobo cooked w plate_0: -6753879634066387344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

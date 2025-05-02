@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pan with oil_0: 7345175577152663560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

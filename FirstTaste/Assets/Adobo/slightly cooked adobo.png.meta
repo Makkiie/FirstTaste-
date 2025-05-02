@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slightly cooked adobo_0: -5688470416479496070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

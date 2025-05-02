@@ -537,7 +537,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cooked pork_0: -2627971187693599002
+      cooked pork_1: 7231589726840239878
+      cooked pork_10: -969724436246356321
+      cooked pork_11: 2333263194440402467
+      cooked pork_12: 5718159828052209874
+      cooked pork_13: 2809850950948722208
+      cooked pork_2: 3106547533991427525
+      cooked pork_3: 1252422620154552887
+      cooked pork_4: -4307103841881245626
+      cooked pork_5: 3523114657947200369
+      cooked pork_6: 818060113542269642
+      cooked pork_7: -7090331325861427984
+      cooked pork_8: 8489131009160046026
+      cooked pork_9: -2059142598288675506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

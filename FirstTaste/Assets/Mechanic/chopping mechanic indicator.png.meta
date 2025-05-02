@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chopping mechanic indicator_0: 1326814856751372071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

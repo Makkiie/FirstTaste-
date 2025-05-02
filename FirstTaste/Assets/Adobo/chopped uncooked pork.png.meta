@@ -537,7 +537,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chopped uncooked pork_0: -7602127624868944486
+      chopped uncooked pork_1: -7512310084784916801
+      chopped uncooked pork_10: 4520463926697312553
+      chopped uncooked pork_11: -7506407327414724728
+      chopped uncooked pork_12: -6457515051147827049
+      chopped uncooked pork_13: 8463568041228644840
+      chopped uncooked pork_2: 1724178410810832589
+      chopped uncooked pork_3: 4415554946991214831
+      chopped uncooked pork_4: 6154806494772241066
+      chopped uncooked pork_5: -8079494077104646527
+      chopped uncooked pork_6: -4404483160634899603
+      chopped uncooked pork_7: 6059514178216514852
+      chopped uncooked pork_8: -5950361210936927550
+      chopped uncooked pork_9: -4527898088983901588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spin mechanic indicator_0: -6781710672246536217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

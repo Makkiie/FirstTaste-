@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spin mechanic sample_0: -3637175127308598196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
