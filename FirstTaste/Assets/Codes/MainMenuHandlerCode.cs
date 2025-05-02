@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuHandlerCode : MonoBehaviour
 {
@@ -22,4 +23,12 @@ public class MainMenuHandlerCode : MonoBehaviour
         creditsPanel.SetActive(false ) ;
         mainMenuGroup.SetActive(true );
     }
+
+    public void MoToNewGame(int sceneID)
+    {
+        SceneManager.LoadScene( sceneID );
+    }
+
+
+
 }
