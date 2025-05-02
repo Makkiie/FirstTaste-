@@ -199,13 +199,13 @@ TextureImporter:
       name: aluminum bowl_0
       rect:
         serializedVersion: 2
-        x: 214
-        y: 367
-        width: 63
-        height: 71
+        x: 27
+        y: 55
+        width: 278
+        height: 218
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
       customData: 
       outline: []
       physicsShape: []
@@ -222,11 +222,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 258
-        y: 429
+        y: 320
         width: 56
-        height: 27
+        height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,121 +239,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: aluminum bowl_2
-      rect:
-        serializedVersion: 2
-        x: 379
-        y: 438
-        width: 22
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dac09e2028301d340800000000000000
-      internalID: 4886690927603158189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aluminum bowl_3
-      rect:
-        serializedVersion: 2
-        x: 379
-        y: 429
-        width: 31
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79fbe0e061caa92f0800000000000000
-      internalID: -965269959392444521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aluminum bowl_4
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 395
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d3d627060d417930800000000000000
-      internalID: 4139174220815324112
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aluminum bowl_5
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 390
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0b63ef287a1cdfd0800000000000000
-      internalID: -2315947004873446641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aluminum bowl_6
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 96
-        width: 285
-        height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d776a454caaa5e6e0800000000000000
-      internalID: -1808852018445785219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0b683ab1a0dbda44285ac78c78502667
     internalID: 0
     vertices: []
     indices: 

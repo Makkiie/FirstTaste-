@@ -1,10 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: bc87c831467644a4aa73dba5f48df2f2
+=======
+guid: 7795204daea2233409982c43e6f7ad46
+>>>>>>> 379884fbfdbce0ed5369f90651a41983e3b76ee9
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 140713161882076958
     second: cookbook_0
+<<<<<<< HEAD
   - first:
       213: -1792530141719821848
     second: cookbook_1
@@ -17,6 +22,8 @@ TextureImporter:
   - first:
       213: -3175950481260560141
     second: cookbook_4
+=======
+>>>>>>> 379884fbfdbce0ed5369f90651a41983e3b76ee9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,6 +103,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -122,6 +130,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+=======
+>>>>>>> 379884fbfdbce0ed5369f90651a41983e3b76ee9
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -147,6 +157,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   - serializedVersion: 4
     buildTarget: VisionOS
     maxTextureSize: 2048
@@ -186,6 +197,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> 379884fbfdbce0ed5369f90651a41983e3b76ee9
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -193,10 +206,17 @@ TextureImporter:
       name: cookbook_0
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 369
         y: 78
         width: 1058
         height: 842
+=======
+        x: 46
+        y: 0
+        width: 1508
+        height: 720
+>>>>>>> 379884fbfdbce0ed5369f90651a41983e3b76ee9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,6 +231,7 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+<<<<<<< HEAD
     - serializedVersion: 2
       name: cookbook_1
       rect:
@@ -299,6 +320,8 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+>>>>>>> 379884fbfdbce0ed5369f90651a41983e3b76ee9
     outline: []
     customData: 
     physicsShape: []
@@ -312,12 +335,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
     nameFileIdTable:
       cookbook_0: 140713161882076958
       cookbook_1: -1792530141719821848
       cookbook_2: -8812003778776003720
       cookbook_3: 7907898619654652939
       cookbook_4: -3175950481260560141
+=======
+    nameFileIdTable: {}
+>>>>>>> 379884fbfdbce0ed5369f90651a41983e3b76ee9
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
