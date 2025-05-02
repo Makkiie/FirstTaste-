@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kris_open_mouth_0: 5021349624815803044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
