@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MapGame.unity
     guid: 53eb01ccb958b15449675885e1080244
   - enabled: 1
-    path: Assets/Scenes/Adobogame.unity
+    path: Assets/Scenes/Gatheringgame1.unity
     guid: a014c8b4865c0084ebb24f56fc26b805
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
