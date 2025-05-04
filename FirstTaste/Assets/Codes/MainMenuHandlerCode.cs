@@ -21,7 +21,7 @@ public class MainMenuHandlerCode : MonoBehaviour
     { 
         settingsPanel.SetActive(false );
         creditsPanel.SetActive(false ) ;
-        mainMenuGroup.SetActive(true );
+        mainMenuGroup.SetActive(true);
     }
 
     public void MoToNewGame(int sceneID)
