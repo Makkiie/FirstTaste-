@@ -9,14 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 280071512587f6344b324d3afa846a6d
   - enabled: 1
-    path: Assets/Scenes/MapGame.unity
-    guid: 53eb01ccb958b15449675885e1080244
-  - enabled: 1
-    path: Assets/Scenes/Gatheringgame1.unity
-    guid: a014c8b4865c0084ebb24f56fc26b805
-  - enabled: 1
-    path: Assets/Scenes/Gameplaylvl1.unity
-    guid: 3c9e18846af103c49a91f18122b10ecb
+    path: Assets/Scenes/MapScene.unity
+    guid: 908ced80cb4846d4988b28c68ea32b11
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 75a6a9885058942468a352cbd95935a4, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
