@@ -7,6 +7,7 @@ public class MaiMenuHandler : MonoBehaviour
     public GameObject mainMenuGroup;
     public GameObject settingsPanel;
     public GameObject creditsPanel;
+    public Button quitButton;
 
     public void ShowSettings()
     {
