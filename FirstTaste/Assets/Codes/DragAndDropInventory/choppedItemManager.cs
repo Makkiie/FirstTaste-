@@ -1,9 +1,10 @@
-using UnityEngine;
 using System.Collections.Generic;
-    [System.Serializable]
+using UnityEngine;
+
+[System.Serializable]
 public class ChoppedItemVisual
 {
-    public string itemType;
+    public string itemType; // e.g., "Meat", "Garlic"
     public Sprite choppedSprite;
 }
 
@@ -13,8 +14,7 @@ public class ChoppedItemManager : MonoBehaviour
 
     public Sprite GetChoppedSprite(string itemType)
     {
-        var item = choppedItems.Find(x => x.itemType == itemType);
-        return item != null ? item.choppedSprite : null;
+        var data = choppedItems.Find(x => x.itemType == itemType);
+        return data != null ? data.choppedSprite : null;
     }
 }
-
