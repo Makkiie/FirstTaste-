@@ -1,67 +1,84 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
-public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public string itemID;
-    public string itemType;
-    public Image image;
-
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    private Canvas rootCanvas;
-
-    private Vector3 originalScale;
-    public Transform originalParent;
+    private Canvas canvas;
+    private Transform originalParent;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        rootCanvas = GetComponentInParent<Canvas>();  // This finds the canvas automatically
+        canvas = GetComponentInParent<Canvas>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalParent = transform.parent;
-        transform.SetParent(rootCanvas.transform);  // Move to top-level canvas
-        transform.SetAsLastSibling();               // Bring to front
+        transform.SetParent(canvas.transform, true); // Keep world position
+        canvasGroup.blocksRaycasts = false;
 
-        image.raycastTarget = false;                // Let us drop onto UI elements
-        originalScale = transform.localScale;
-        transform.localScale = originalScale * 1.1f;
+        // If original parent is an InventorySlot, clear it
+        var previousSlot = originalParent.GetComponent<InventorySlot>();
+        if (previousSlot != null)
+        {
+            previousSlot.ClearItem();
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector2 localPoint;
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            rootCanvas.transform as RectTransform,
-            eventData.position,
-            eventData.pressEventCamera,
-            out localPoint))
-        {
-            rectTransform.localPosition = localPoint;
-        }
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.SetParent(originalParent);
-        transform.localPosition = Vector3.zero;
+        canvasGroup.blocksRaycasts = true;
 
-        image.raycastTarget = true;
-        transform.localScale = originalScale;
-    }
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        ChoppingSessionData.itemID = itemID;
-        ChoppingSessionData.itemType = itemType;
-        ChoppingSessionData.originalSprite = image.sprite;
+        bool droppedOnSlot = false;
 
-        SceneManager.LoadScene("ChoppingScene");
+        foreach (var result in results)
+        {
+            InventorySlot slot = result.gameObject.GetComponent<InventorySlot>();
+            if (slot != null && slot.HasSpace())
+            {
+                slot.SetItem(gameObject);
+                droppedOnSlot = true;
+                break;
+            }
+        }
+
+        if (!droppedOnSlot)
+        {
+            // Drop on TABLEIMAGEOpacity
+            GameObject tableObj = GameObject.Find("TABLEIMAGEOpacity");
+            if (tableObj != null)
+            {
+                Transform table = tableObj.transform;
+                transform.SetParent(table, false); // keep local position
+
+                // Convert screen position to local anchored position inside table
+                RectTransform tableRect = table.GetComponent<RectTransform>();
+                Vector2 localPoint;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                    tableRect, eventData.position, canvas.worldCamera, out localPoint);
+                rectTransform.anchoredPosition = localPoint;
+
+                transform.SetAsLastSibling(); // Render on top
+                Debug.Log("✅ Dropped item on table: " + gameObject.name);
+            }
+            else
+            {
+                Debug.LogError("❌ TABLEIMAGEOpacity object not found!");
+                transform.SetParent(originalParent, false); // fallback
+            }
+        }
     }
 }

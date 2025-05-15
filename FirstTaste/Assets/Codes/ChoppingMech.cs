@@ -1,7 +1,8 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ChoppingMEch : MonoBehaviour
 
@@ -11,17 +12,18 @@ public class ChoppingMEch : MonoBehaviour
     public RectTransform bar;
     public Button tapButton;
     public GameObject resultPanel;
-    public Text resultText;
+    public TextMeshProUGUI resultText;
     public Button exitButton;
 
     [Header("Movement Settings")]
     public float speed = 500f;
 
     private bool movingRight = true;
-    private bool isMoving= true;
+    private bool isMoving = true;
     private float leftLimit;
     private float rightLimit;
     public Image itemDisplayImage;
+    public Image resultImage;
 
     private void Start()
     {
@@ -41,7 +43,7 @@ public class ChoppingMEch : MonoBehaviour
         {
             resultPanel.SetActive(false);
         }
-        if(itemDisplayImage != null && ChoppingSessionData.originalSprite != null)
+        if (itemDisplayImage != null && ChoppingSessionData.originalSprite != null)
         {
             itemDisplayImage.sprite = ChoppingSessionData.originalSprite;
         }
@@ -70,10 +72,10 @@ public class ChoppingMEch : MonoBehaviour
         float percent = distanceFromLeft / barWidth;
 
         //Debug 
-       
+
         if (percent >= 0.44f && percent <= 0.55f)
         {
-            
+
             resultText.text = "Perfect!";
             resultText.color = Color.green;
         }
@@ -81,7 +83,7 @@ public class ChoppingMEch : MonoBehaviour
         {
             resultText.text = "Good!";
             resultText.color = Color.yellow;
-        }    
+        }
         else
         {
             resultText.text = "Bad!";
@@ -89,16 +91,44 @@ public class ChoppingMEch : MonoBehaviour
         }
         resultPanel.SetActive(true);
         UnityEngine.Debug.Log($"Arrow Landed at {percent * 100f}% of The bar");
+
+        if (resultImage != null && ChoppingSessionData.choppedSprite != null)
+        {
+            resultImage.sprite = ChoppingSessionData.choppedSprite;
+        }
+
+        string path = $"ChoppedSprites/{ChoppingSessionData.itemType}_chopped";
+        Sprite chopped = Resources.Load<Sprite>(path);
+
+        if (chopped != null)
+        {
+            ChoppingSessionData.choppedSprite = chopped;
+            UnityEngine.Debug.Log("✅ Chopped sprite loaded: " + chopped.name);
+
+            if (resultImage != null)
+            {
+                resultImage.sprite = chopped;
+                UnityEngine.Debug.Log("✅ resultImage.sprite assigned.");
+            }
+            else
+            {
+                UnityEngine.Debug.Log("❌ resultImage is not assigned in Inspector.");
+            }
+        }
+        else
+        {
+            UnityEngine.Debug.LogError("❌ Failed to load chopped sprite at path: " + path);
+        }
+
     }
     void HideResultPanel()
-    { 
-       resultPanel.SetActive(false);
+    {
+        resultPanel.SetActive(false);
         isMoving = true;
         resultText.text = "";
     }
-    void ExitChoppingScene()
+    public void ExitChoppingScene()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("AdoboGatheringAsset");
     }
 }
-
