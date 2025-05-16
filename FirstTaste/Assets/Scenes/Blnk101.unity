@@ -2000,10 +2000,8 @@ MonoBehaviour:
   tapButton: {fileID: 64317422}
   resultPanel: {fileID: 0}
   resultText: {fileID: 0}
-  mechanicsDisplayImageNeedToCut: {fileID: 0}
   choppedImage: {fileID: 0}
-  blankImage: {fileID: 0}
-  ingredients: []
+  displayImageNeedToCut: {fileID: 0}
 --- !u!1 &1287586804
 GameObject:
   m_ObjectHideFlags: 0
