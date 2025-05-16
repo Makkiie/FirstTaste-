@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public static class ChoppingSessionData
 {
@@ -7,6 +8,9 @@ public static class ChoppingSessionData
     public static string result;
     public static Sprite originalSprite;
     public static Sprite choppedSprite; // ✅ Add this
-
     public static Vector2? previousPosition;
+    public static Vector2? tableitemPosition;
+
+    public static HashSet<string> movedItemIDs = new HashSet<string>();
+
 }

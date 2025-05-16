@@ -38,12 +38,9 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
-
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, results);
-
         bool droppedOnSlot = false;
-
         foreach (var result in results)
         {
             InventorySlot slot = result.gameObject.GetComponent<InventorySlot>();
@@ -54,7 +51,6 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 break;
             }
         }
-
         if (!droppedOnSlot)
         {
             // Drop on TABLEIMAGEOpacity
@@ -63,14 +59,14 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             {
                 Transform table = tableObj.transform;
                 transform.SetParent(table, false); // keep local position
-
-                // Convert screen position to local anchored position inside table
+                                                   // Convert screen position to local anchored position inside table
                 RectTransform tableRect = table.GetComponent<RectTransform>();
                 Vector2 localPoint;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(
                     tableRect, eventData.position, canvas.worldCamera, out localPoint);
                 rectTransform.anchoredPosition = localPoint;
-
+                // Store the position of the item on the table
+                ChoppingSessionData.tableitemPosition = localPoint;
                 transform.SetAsLastSibling(); // Render on top
                 Debug.Log("✅ Dropped item on table: " + gameObject.name);
             }
