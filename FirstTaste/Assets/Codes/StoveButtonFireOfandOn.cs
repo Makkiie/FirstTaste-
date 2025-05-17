@@ -1,25 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class StoveButtonFireOfandOn : MonoBehaviour
+public class ToggleButtonImage : MonoBehaviour
 {
-    public Sprite StoveButton;
-    public Button button;
+    public Button button;            // Assign your button
+    public Sprite defaultSprite;     // Sprite to show normally
+    public Sprite clickedSprite;     // Sprite to show when clicked
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Image buttonImage;
+    private bool isClicked = false;
+
     void Start()
     {
-        
+        buttonImage = button.GetComponent<Image>();
+        buttonImage.sprite = defaultSprite; // Set to default initially
+
+        button.onClick.AddListener(ToggleImage);
     }
 
-    // Update is called once per frame
-    void Update()
+    void ToggleImage()
     {
-        
-    }
-    public void ChangeButtonImage()
-    {
-        button.image.sprite = StoveButton;
+        isClicked = !isClicked;
+
+        if (isClicked)
+        {
+            buttonImage.sprite = clickedSprite;
+        }
+        else
+        {
+            buttonImage.sprite = defaultSprite;
+        }
     }
 }
