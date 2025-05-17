@@ -1027,7 +1027,9 @@ MonoBehaviour:
   - Welcome to First Taste!
   - "My name\u2019s Kris! I grew up in a family where cooking Filipino dishes was
     a way of bringing everyone together."
-  textspeed: 0.5
+  - "My name\u2019s Kris! I grew up in a family where cooking Filipino dishes was
+    a way of bringing everyone together."
+  textspeed: 3
 --- !u!1 &358918427
 GameObject:
   m_ObjectHideFlags: 0
