@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c7d38eba4191b4ea37ac801120348b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogPanel: {fileID: 0}
+  DialogPanel: {fileID: 351694612}
   textcomponet: {fileID: 203854840}
   lines:
   - 'Hi there! You look ready to cook! '
@@ -1173,9 +1173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e873755a487ce64a9362629474c941e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapOceanPanel: {fileID: 0}
-  DescriptionPanel: {fileID: 0}
-  SettingPanel: {fileID: 0}
+  MapOceanPanel: {fileID: 395852947}
+  DescriptionPanel: {fileID: 1472928327}
+  SettingPanel: {fileID: 900543407}
 --- !u!1 &371532316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &395852948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2015,7 +2015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &835004617
 RectTransform:
   m_ObjectHideFlags: 0

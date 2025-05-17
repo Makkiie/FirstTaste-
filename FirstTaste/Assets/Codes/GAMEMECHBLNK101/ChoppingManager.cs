@@ -5,7 +5,7 @@ public class ChopUIManager : MonoBehaviour
 {
     [Header("Chop UI Panels")]
     public GameObject choppingPanel;
-    public GameObject resultPanel; // 👈 NEW panel that shows the score result
+    public GameObject resultPanel; //NEW panel that shows the score result
 
     [Header("Chop UI Components")]
     public Image kitchenImage;
@@ -76,7 +76,7 @@ public class ChopUIManager : MonoBehaviour
         resultText.color = color;
         resultImage.sprite = currentIngredient.choppedSprite;
 
-        resultPanel.SetActive(true);           // 👈 show score panel
+        resultPanel.SetActive(true);           //  show score panel
         resultImage.gameObject.SetActive(true); // show chopped image
     }
 

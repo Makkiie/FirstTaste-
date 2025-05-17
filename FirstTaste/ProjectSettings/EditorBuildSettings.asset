@@ -12,11 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MapScene.unity
     guid: 908ced80cb4846d4988b28c68ea32b11
   - enabled: 1
-    path: Assets/Scenes/DRAGANDDROP/AdoboGatheringAsset.unity
-    guid: 21efebc0d1796984891ba7bb646f3015
-  - enabled: 1
-    path: Assets/Scenes/ChoppingScene.unity
-    guid: 44687951293996542a09437f4e0b3085
+    path: Assets/Scenes/ADOBOLVL1/Blnk101.unity
+    guid: 5449bf7f96ec16d4484241005ec1750e
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 75a6a9885058942468a352cbd95935a4, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
