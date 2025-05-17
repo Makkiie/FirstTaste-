@@ -5,6 +5,7 @@ using UnityEditor.Tilemaps;
 
 public class Dialog : MonoBehaviour
 {
+
     public GameObject DialogPanel;
     public TextMeshProUGUI textcomponet;
     public string[] lines;
