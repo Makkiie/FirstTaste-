@@ -79,10 +79,10 @@ public class ChopUIManager : MonoBehaviour
         resultPanel.SetActive(true);           //  show score panel
         resultImage.gameObject.SetActive(true); // show chopped image
     }
-
+   
     public void BackToGame()
     {
-        if (originalSlot != null && currentIngredient != null)
+        if (originalSlot != null && currentIngredient != null) //Return to game Kitchen
             originalSlot.sprite = currentIngredient.choppedSprite;
 
         choppingPanel.SetActive(false);

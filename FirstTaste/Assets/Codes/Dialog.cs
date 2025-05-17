@@ -20,7 +20,7 @@ public class Dialog : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // Update called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -59,11 +59,11 @@ public class Dialog : MonoBehaviour
         {
             index++;
             textcomponet.text = string.Empty;
-            StartCoroutine (TypeLine());
+            StartCoroutine(TypeLine());
         }
         else
         {
-            gameObject.SetActive(false);
+            DialogPanel.SetActive(false); // Close the dialog properly
         }
     }
 }
