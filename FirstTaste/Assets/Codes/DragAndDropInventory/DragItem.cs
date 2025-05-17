@@ -2,11 +2,14 @@
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
+
+
 public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [SerializeField] private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    private Canvas canvas;
+    
     private Transform originalParent;
 
     private void Awake()
@@ -22,7 +25,13 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         transform.SetParent(canvas.transform, true); // Keep world position
         canvasGroup.blocksRaycasts = false;
 
-        // If original parent is an InventorySlot, clear it
+        // Re-fetch canvas after reparenting
+        canvas = GetComponentInParent<Canvas>();
+        if (canvas == null)
+        {
+            Debug.LogError("❌ No canvas found for dragged item!");
+        }
+
         var previousSlot = originalParent.GetComponent<InventorySlot>();
         if (previousSlot != null)
         {
@@ -37,7 +46,15 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.blocksRaycasts = true;
+        if(rectTransform == null || canvas == null)
+    {
+            Debug.LogError("❌ DragItem is missing RectTransform or Canvas!");
+            return;
+        }
+
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+    
+    canvasGroup.blocksRaycasts = true;
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, results);
         bool droppedOnSlot = false;

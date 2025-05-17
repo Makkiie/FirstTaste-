@@ -2651,6 +2651,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1651377015}
+--- !u!114 &1651377026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2249333562658927946, guid: 800b8ab1ef169874394180d345fda783, type: 3}
+  m_PrefabInstance: {fileID: 605042409408524001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651377015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1651377028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651377015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a4b4ebfaad2eb4f8f8536b402eda94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: plate_0
+  itemType: plate
+  image: {fileID: 1651377026}
+  chopResult: plate_0
+--- !u!114 &1651377029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651377015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160e1f6488c8f3546bd89a36b529aef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1666395444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,7 +3144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 193906625341877717, guid: 800b8ab1ef169874394180d345fda783, type: 3}
       propertyPath: m_Name
-      value: ItemSlotinside
+      value: plate_0
       objectReference: {fileID: 0}
     - target: {fileID: 5096593891903976232, guid: 800b8ab1ef169874394180d345fda783, type: 3}
       propertyPath: m_Pivot.x
@@ -3198,6 +3237,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 193906625341877717, guid: 800b8ab1ef169874394180d345fda783, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1651377022}
+    - targetCorrespondingSourceObject: {fileID: 193906625341877717, guid: 800b8ab1ef169874394180d345fda783, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1651377028}
+    - targetCorrespondingSourceObject: {fileID: 193906625341877717, guid: 800b8ab1ef169874394180d345fda783, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1651377029}
   m_SourcePrefab: {fileID: 100100000, guid: 800b8ab1ef169874394180d345fda783, type: 3}
 --- !u!1001 &4430939820392226650
 PrefabInstance:
